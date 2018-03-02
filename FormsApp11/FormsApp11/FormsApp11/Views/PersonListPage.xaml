@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FormsApp11"
-             BackgroundColor="{StaticResource PageBackgroundColor}"
-             Title="{Binding Title}"
-             x:Class="FormsApp11.PersonListPage">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FormsApp11"
+    BackgroundColor="{StaticResource PageBackgroundColor}"
+    Title="{Binding Title}"
+    x:Class="FormsApp11.PersonListPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
+            <!-- ResourceDictionary merged sample -->
             <ResourceDictionary.MergedDictionaries>
                 <local:ResourceDictionaryEx />
             </ResourceDictionary.MergedDictionaries>
