@@ -1,4 +1,4 @@
 # Xamarin.Forms Samples
 
 # Solution #
-FormsApp1: ResourceDictioanry
+FormsApp1: ResourceDictionary
