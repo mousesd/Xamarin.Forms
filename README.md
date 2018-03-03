@@ -1,6 +1,5 @@
 # Xamarin.Forms Samples
 
 # Solution #
-FormsApp11: ResourceDictionary
-
-FormsApp12: Styles
+1. FormsApp11: ResourceDictionary
+2. FormsApp12: Styles
