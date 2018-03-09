@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FormsApp13"
+             xmlns:service="clr-namespace:FormsApp13.MarkupExtensions"
+             x:Class="FormsApp13.MainPage">
+
+    <StackLayout Padding="0,25,0,0">
+        <Label Text="{service:Translate NotesLabel}"/>
+        <Entry Placeholder="{service:Translate NotesPlaceholder}"/>
+        <Button Text="{service:Translate AddButton}"/>
+    </StackLayout>
+
+</ContentPage>
