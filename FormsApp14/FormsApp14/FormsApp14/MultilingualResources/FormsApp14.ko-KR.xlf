@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ko-KR" original="FORMSAPP14/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="FORMSAPP14/RESOURCES/APPRESOURCES.RESX" datatype="resx">
+        <trans-unit id="HelloWorld" translate="yes" xml:space="preserve">
+          <source>Hello from App Resource</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">응용 프로그램 리소스에서 안녕하세요</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
