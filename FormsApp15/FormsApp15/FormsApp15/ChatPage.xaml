@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:selector="clr-namespace:FormsApp15.Selectors"
+             x:Class="FormsApp15.ChatPage"
+             Title="Easy Chat">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <selector:MessageDataTemplateSelector x:Key="MessageDataTemplateSelector"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <RelativeLayout>
+        <ListView x:Name="MessageListView" HasUnevenRows="True" SeparatorVisibility="None" 
+            ItemTemplate="{StaticResource MessageDataTemplateSelector}"
+            ItemsSource="{Binding Messages}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=0}"/>
+        <Grid RowSpacing="1" ColumnSpacing="2" BackgroundColor="#EFEFF4" 
+            VerticalOptions="FillAndExpand" 
+            HorizontalOptions="FillAndExpand"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MessageListView, Property=Height, Factor=.91, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MessageListView, Property=Height, Factor=.09, Constant=0}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <Entry HeightRequest="25" Placeholder="Message" Text="{Binding Text, Mode=TwoWay}"/>
+            <Button Grid.Column="1" Text="Send" Command="{Binding SendCommand}"/>
+        </Grid>
+    </RelativeLayout>
+</ContentPage>

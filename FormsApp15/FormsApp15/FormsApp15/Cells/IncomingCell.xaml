@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="FormsApp15.Cells.IncomingCell">
+    <Grid ColumnSpacing="2" Padding="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Frame OutlineColor="Transparent" HasShadow="False" BackgroundColor="#03A9F4">
+            <Label TextColor="White" Text="{Binding Text}"/>
+        </Frame>
+        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <Label FontSize="Micro" Text="{Binding Name}" TextColor="Black"/>
+            <Label FontSize="Micro" Text="{Binding DateTime, StringFormat='{0:yyyy-MM-dd hh:mm:ss}'}"
+                   TextColor="Black"/>
+        </StackLayout>
+
+    </Grid>
+</ViewCell>

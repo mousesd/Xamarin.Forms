@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FormsApp15"
+             x:Class="FormsApp15.MainPage"
+             Title="Easy Chat - Signup">
+
+    <StackLayout HorizontalOptions="CenterAndExpand"
+        VerticalOptions="Center">
+        <Entry Text="{Binding UserName}" Placeholder="What's your name?" WidthRequest="200"/>
+        <Button Text="Signup" Command="{Binding SignupCommand}"/>
+    </StackLayout>
+
+</ContentPage>
