@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FormsApp16"
+             xmlns:controls="clr-namespace:FormsApp16.Controls"
+             x:Class="FormsApp16.MainPage"
+             Title="Monkeys Horizontal List">
+
+    <ScrollView>
+        <Grid 
+            HorizontalOptions="Start" 
+            Margin="5" 
+            Padding="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+        
+            <Label 
+                VerticalOptions="End"
+                Text="The horizontal View bellow is made of a rotated ListView"/>
+            <RelativeLayout
+                Grid.Row="1"
+                HeightRequest="100"
+                VerticalOptions="Start">
+                <ListView
+                    Rotation="270"
+                    RowHeight="100"
+                    ItemsSource="{Binding Monkeys}"
+                    SeparatorVisibility="None"
+                    CachingStrategy="RecycleElement"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-50}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.5, Constant=50}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=100}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ContentView
+                                    Rotation="90"
+                                    BackgroundColor="Transparent">
+                                    <StackLayout
+                                        HeightRequest="100"
+                                        WidthRequest="100">
+                                        <Image Source="{Binding Image}"/>
+                                        <Label
+                                            Text="{Binding Name}"
+                                            HorizontalTextAlignment="Center"
+                                            LineBreakMode="MiddleTruncation"/>
+                                    </StackLayout>
+                                </ContentView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </RelativeLayout>
+        
+            <Label 
+                Grid.Row="2"
+                VerticalOptions="End"
+                Text="The horizontal View bellow is made of a custom control with a grid + horizontal scroll view"/>
+            <controls:HorizontalScrollGrid
+                Grid.Row="3"
+                ListOrientation="Horizontal"
+                ItemsSource="{Binding Monkeys}"
+                VerticalOptions="Start">
+                <controls:HorizontalScrollGrid.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <StackLayout
+                                WidthRequest="100"
+                                HeightRequest="100">
+                                <Image Source="{Binding Image}"/>
+                                <Label
+                                    Text="{Binding Name}"
+                                    LineBreakMode="MiddleTruncation"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </ContentView>
+                    </DataTemplate>
+                </controls:HorizontalScrollGrid.ItemTemplate>
+
+            </controls:HorizontalScrollGrid>
+
+            <Label
+                Grid.Row="4"
+                VerticalOptions="End"
+                HorizontalOptions="FillAndExpand"
+                Text="The horizontal View bellow is made of a custom renderer, RecycleView for android and UICollectionView for iOS"/>
+            <controls:HorizontalListView
+                ItemsSource="{Binding Monkeys}"
+                Grid.Row="5"
+                VerticalOptions="Start"
+                ItemWidth="100"
+                ItemHeight="100">
+                <controls:HorizontalListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ContentView>
+                                <StackLayout
+                                    WidthRequest="100"
+                                    HeightRequest="100">
+                                    <Image Source="{Binding Image}"/>
+                                    <Label Text="{Binding Name}"
+                                        LineBreakMode="MiddleTruncation"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ContentView>
+                        </ViewCell>
+                    </DataTemplate>
+                </controls:HorizontalListView.ItemTemplate>
+            </controls:HorizontalListView>
+            
+            <Button
+                Grid.Row="6"
+                Text="Change the monkey items"
+                Command="{Binding ChangeItemsCommand}"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
