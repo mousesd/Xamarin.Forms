@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:FormsApp18.Views;assembly=FormsApp18"
+    xmlns:viewModels="clr-namespace:FormsApp18.ViewModels;assembly=FormsApp18"
+    x:Class="FormsApp18.Views.ItemPage"
+    x:TypeArguments="viewModels:ItemsViewModel" >
+    
+    <StackLayout>
+        <ListView
+            ItemsSource="{Binding Todos}"
+            SelectedItem="{Binding SelectedTodo}"
+            CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell IsEnabled="{Binding IsEnabled}">
+                        <StackLayout Orientation="Horizontal">
+                            <Label
+                                Text="{Binding Title}"
+                                Style="{DynamicResource ListItemTextStyle}"
+                                HorizontalOptions="StartAndExpand"
+                                VerticalOptions="Center"/>
+                            <Switch
+                                IsToggled="{Binding IsDone}"
+                                HorizontalOptions="End"
+                                IsEnabled="{Binding IsEnabled}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <StackLayout Orientation="Horizontal">
+            <Entry 
+                Text="{Binding TodoTitle}"
+                HorizontalOptions="FillAndExpand"/>
+            <Button 
+                Text="Add"
+                HorizontalOptions="End"
+                Command="{Binding AddCommand}"/>
+        </StackLayout>
+    </StackLayout>
+
+</views:ContentPageBase>

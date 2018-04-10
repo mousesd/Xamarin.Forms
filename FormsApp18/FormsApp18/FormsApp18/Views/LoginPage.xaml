@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:FormsApp18.Views;assembly=FormsApp18"
+    xmlns:viewModels="clr-namespace:FormsApp18.ViewModels;assembly=FormsApp18"
+    x:Class="FormsApp18.Views.LoginPage"
+    x:TypeArguments="viewModels:LoginViewModel" >
+    
+    <StackLayout>
+        <Label Text="Login" FontSize="Large" FontAttributes="Bold"
+            HorizontalOptions="Center" VerticalTextAlignment="Center" Margin="10"/>
+        <Entry Placeholder="Email" Text="{Binding Email}" Margin="10,50,10,0"/>
+        <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" Margin="10"/>
+        <Button HorizontalOptions="Center" Margin="10" Text="Login" Command="{Binding LoginCommand}"/>
+    </StackLayout>
+
+</views:ContentPageBase>

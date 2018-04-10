@@ -8,3 +8,4 @@
 5. FormsApp15: '[Developing real-time communication apps with WebSocket](https://blog.xamarin.com/developing-real-time-communication-apps-with-websocket/?utm_medium=social&utm_campaign=blog&utm_source=twitter&utm_content=real-time-comm-app-with-websockets)'
 6. FormsApp16: '[Xamarin.Forms ultimate horizontal list guide](https://causerexception.com/2018/02/06/xamarin-forms-ultimate-horizontal-list-guide/)'
 7. FormsApp17: '[Adding badge to ToolbarItem in Xamarin.Forms](https://www.xamboy.com/2018/03/08/adding-badge-to-toolbaritem-in-xamarin-forms/?utm_campaign=Weekly%2BXamarin&utm_medium=email&utm_source=Weekly_Xamarin_146)'
+8. FormsApp18: '[MVVM Pattern with ReactiveUI and Xamarin.Forms](https://doumer.me/2018/03/11/mvvm-with-reactiveui/)'
