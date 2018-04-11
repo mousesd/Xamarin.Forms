@@ -10,3 +10,4 @@
 7. FormsApp17: '[Adding badge to ToolbarItem in Xamarin.Forms](https://www.xamboy.com/2018/03/08/adding-badge-to-toolbaritem-in-xamarin-forms/?utm_campaign=Weekly%2BXamarin&utm_medium=email&utm_source=Weekly_Xamarin_146)'
 8. FormsApp18: '[MVVM Pattern with ReactiveUI and Xamarin.Forms](https://doumer.me/2018/03/11/mvvm-with-reactiveui/)'
 9. FormsApp19: '[Using native Facebook login button in Xamarin.Forms](https://smellyc0de.wordpress.com/2018/03/09/using-native-facebook-login-button-in-xamarin-forms/)'
+10. FormsApp20: '[User input validation in Xamarin.Forms](https://smellyc0de.wordpress.com/2018/04/02/user-input-validation-in-xamarin-forms/)'
