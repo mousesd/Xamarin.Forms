@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "187239413955",
+    "firebase_url": "https://formsapp21.firebaseio.com",
+    "project_id": "formsapp21",
+    "storage_bucket": "formsapp21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187239413955:android:292fd642ac456cec",
+        "android_client_info": {
+          "package_name": "net.homenet.FormsApp21"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187239413955-20p1ocqofgda7al75cnkndp98a6tdkpv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo-rNKnxQ0Y3EF5r0QUVvrcbcZv02QROk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
