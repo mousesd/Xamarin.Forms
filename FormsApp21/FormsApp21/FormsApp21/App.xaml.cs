@@ -13,22 +13,7 @@ namespace FormsApp21
 		{
 			InitializeComponent();
 
-			MainPage = new FormsApp21.MainPage();
-		}
-
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
-
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
-
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
+            this.MainPage = new NavigationPage(new LoginPage());
 		}
 	}
 }

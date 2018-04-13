@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsApp21.Views.HomePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Boolean x:Key="true">True</x:Boolean>
+            <x:Boolean x:Key="false">False</x:Boolean>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout
+        Orientation="Vertical"
+        Padding="25"
+        VerticalOptions="Center">
+        <ActivityIndicator
+            IsVisible="{Binding IsBusy}"
+            IsRunning="{Binding IsBusy}"/>
+        <Button
+            Text="Make authorized request"
+            Command="{Binding RequestCommand}"
+            CommandParameter="{StaticResource true}"/>
+        <Button
+            Text="Make unauthorized request"
+            Command="{Binding RequestCommand}"
+            CommandParameter="{StaticResource false}"/>
+        <Label
+            HorizontalTextAlignment="Center"
+            Text="{Binding RemoteData}"/>
+    </StackLayout>
+</ContentPage>
