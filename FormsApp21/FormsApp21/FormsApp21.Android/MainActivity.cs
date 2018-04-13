@@ -20,8 +20,8 @@ namespace FormsApp21.Droid
 
             base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
             FirebaseApp.InitializeApp(Application.Context);
+            global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
     }

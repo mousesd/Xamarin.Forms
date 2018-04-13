@@ -22,8 +22,8 @@ namespace FormsApp21.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            global::Xamarin.Forms.Forms.Init();
             Firebase.Core.App.Configure();
+            global::Xamarin.Forms.Forms.Init();
             LoadApplication(new FormsApp21.App());
 
             return base.FinishedLaunching(app, options);

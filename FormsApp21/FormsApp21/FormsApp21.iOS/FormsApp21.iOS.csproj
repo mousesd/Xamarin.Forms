@@ -92,7 +92,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Services\FirebaseAuthenticator.cs" />
     <None Include="Entitlements.plist" />
-    <EmbeddedResource Include="GoogleService-Info.plist" />
+    <BundleResource Include="GoogleService-Info.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,8 +121,20 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.Build.Download">
+      <Version>0.4.9</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Analytics">
+      <Version>4.0.5</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Firebase.iOS.Auth">
       <Version>4.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Core">
+      <Version>4.0.13</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.InstanceID">
+      <Version>2.0.8</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
   </ItemGroup>

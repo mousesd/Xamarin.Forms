@@ -1,8 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Firebase.Auth;
-
+using Xamarin.Forms;
 using FormsApp21.Services;
+using FormsApp21.iOS.Services;
 
+[assembly:Dependency(typeof(FirebaseAuthenticator))]
 namespace FormsApp21.iOS.Services
 {
     public class FirebaseAuthenticator : IFirebaseAuthenticator
