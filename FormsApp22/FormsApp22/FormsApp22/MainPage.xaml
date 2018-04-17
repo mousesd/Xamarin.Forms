@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FormsApp22"
+             xmlns:viewModels="clr-namespace:FormsApp22.ViewModels"
+             xmlns:behaviors="clr-namespace:FormsApp22.Behaviors"
+             x:Class="FormsApp22.MainPage"
+             Title="Beards!">
+
+    <ContentPage.BindingContext>
+        <viewModels:BehavirosViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+
+    <StackLayout
+        Orientation="Vertical"
+        HorizontalOptions="Center"
+        VerticalOptions="Start"
+        Margin="0,40"
+        Spacing="30"
+        Padding="30,0">
+        
+        <Label Text="How dows my beard look?" FontSize="32" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        <Picker
+            Title="Rate your beard"
+            ItemsSource="{Binding BeardRatings}"
+            SelectedItem="{Binding SelectedBeardRating}"
+            ItemDisplayBinding="{Binding Description}">
+            <Picker.Behaviors>
+                <behaviors:PickerColorBehavior
+                    ValidValues="{x:Static viewModels:BehavirosViewModel.ValidRatings}"
+                    InvalidColor="Fuchsia"/>
+            </Picker.Behaviors>
+        </Picker>
+        
+        <!--
+        <Label Text="Beard Diary" Margin="0,-20"/>
+        <Entry>
+            <Entry.Behaviors>
+                <behaviors:EntryPressBehavior Command="{Binding EntryPressCommand}"/>
+            </Entry.Behaviors>
+        </Entry>
+        -->
+    </StackLayout>
+
+</ContentPage>

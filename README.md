@@ -12,3 +12,4 @@
 9. FormsApp19: '[Using native Facebook login button in Xamarin.Forms](https://smellyc0de.wordpress.com/2018/03/09/using-native-facebook-login-button-in-xamarin-forms/)'
 10. FormsApp20: '[User input validation in Xamarin.Forms](https://smellyc0de.wordpress.com/2018/04/02/user-input-validation-in-xamarin-forms/)'
 11. FormsApp21: '[Firebase authentication in Xamarin.Forms](https://smellyc0de.wordpress.com/2018/03/26/firebase-authentication-in-xamarin-forms/)'
+12. FormsApp22: '[Extend Xamarin.Forms controls functionality with behaviors](https://blog.xamarin.com/extend-xamarin-forms-controls-functionality-with-behaviors/?utm_medium=social&utm_campaign=blog&utm_content=extend-xamarin-forms-controls-with-behaviors)'
