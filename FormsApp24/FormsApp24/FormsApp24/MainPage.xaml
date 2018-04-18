@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:FormsApp24.Behaviors"
+             x:Class="FormsApp24.MainPage">
+
+    <Label 
+        Text="Label shadow effect"
+        FontAttributes="Bold"
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand">
+        <Label.Behaviors>
+            <behaviors:EffectBehavior Group="Xamarin" Name="LabelShadowEffect"/>
+        </Label.Behaviors>
+    </Label>
+
+</ContentPage>
