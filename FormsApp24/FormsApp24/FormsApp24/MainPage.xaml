@@ -8,7 +8,7 @@
         Text="Label shadow effect"
         FontAttributes="Bold"
         HorizontalOptions="Center"
-        VerticalOptions="CenterAndExpand">
+        VerticalOptions="Center">
         <Label.Behaviors>
             <behaviors:EffectBehavior Group="Xamarin" Name="LabelShadowEffect"/>
         </Label.Behaviors>
