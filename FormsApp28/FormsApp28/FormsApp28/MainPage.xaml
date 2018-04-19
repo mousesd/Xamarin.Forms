@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effects="clr-namespace:FormsApp28.Effects"
+             x:Class="FormsApp28.MainPage">
+
+    <StackLayout
+        Margin="25"
+        Orientation="Vertical">
+        <Label x:Name="label"
+            Text="Label Shadow Effect"
+            HorizontalTextAlignment="Center"
+            effects:ShadowEffect.HasShadow="True"
+            effects:ShadowEffect.Radius="5"
+            effects:ShadowEffect.DistanceX="5"
+            effects:ShadowEffect.DistanceY="5">
+            <effects:ShadowEffect.Color>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="iOS" Value="Black"/>
+                    <On Platform="Android" Value="Red"/>
+                </OnPlatform>
+            </effects:ShadowEffect.Color>
+        </Label>
+        <Button
+            Text="Change Shadow Color"
+            VerticalOptions="EndAndExpand"
+            Clicked="OnChangeShadowColor"/>
+    </StackLayout>
+
+</ContentPage>
