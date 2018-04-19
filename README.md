@@ -17,3 +17,4 @@
 14. FormsApp24: '[Reusable EffectBehavior](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/reusable/effect-behavior)'
 15. FormsApp25: '[Reusable EventToCommandBehavior](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior)'
 16. FormsApp26: '[Creating an Effect](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/creating)'
+17. FormsApp27: '[Passing Effect Parameters as CLR Properties](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/passing-parameters/clr-properties)'

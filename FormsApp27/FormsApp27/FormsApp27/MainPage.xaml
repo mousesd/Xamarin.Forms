@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:effects="clr-namespace:FormsApp27.Effects"
+             x:Class="FormsApp27.MainPage">
+
+    <StackLayout
+        Margin="25"
+        Orientation="Vertical">
+        <Label 
+            Text="Label Shadow Effect"
+            HorizontalTextAlignment="Center"
+            FontAttributes="Bold">
+            <Label.Effects>
+                <effects:ShadowEffect
+                    Radius="5"
+                    DistanceX="5"
+                    DistanceY="5">
+                    <effects:ShadowEffect.Color>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS" Value="Black"/>
+                            <On Platform="Android" Value="Yellow"/>
+                            <On Platform="UWP" Value="Red"/>
+                        </OnPlatform>
+                    </effects:ShadowEffect.Color>
+                </effects:ShadowEffect>
+            </Label.Effects>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
