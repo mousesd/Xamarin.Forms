@@ -19,3 +19,4 @@
 16. FormsApp26: '[Creating an Effect](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/creating)'
 17. FormsApp27: '[Passing Effect Parameters as CLR Properties](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/passing-parameters/clr-properties)'
 18. FormsApp28: '[Passing Effect Parameters as Attached Properties](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/effects/passing-parameters/attached-properties)'
+19. FormsApp29: '[Master-Detail Page on Xamarin.Forms Guide](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/master-detail-page)'
