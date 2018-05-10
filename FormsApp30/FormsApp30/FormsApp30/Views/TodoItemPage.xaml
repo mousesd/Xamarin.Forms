@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:FormsApp30.ViewModels"
+             xmlns:dataTemplates="clr-namespace:FormsApp30.DataTemplates"
+             xmlns:dataTemplateSelector="clr-namespace:FormsApp30.DataTemplateSelectors"
+             x:Class="FormsApp30.Views.TodoItemPage"
+             x:Name="TodoPage"
+             Title="Todos">
+    
+    <ContentPage.BindingContext>
+        <viewModels:TodoViewModel/>
+    </ContentPage.BindingContext>
+    
+    <Grid>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <DataTemplate x:Key="CurrentTodoTemplate">
+                    <dataTemplates:CurrentTodoTemplate BaseContext="{Binding BindingContext, Source={x:Reference TodoPage}}"/>
+                </DataTemplate>
+                <DataTemplate x:Key="CompletedTodoTemplate">
+                    <dataTemplates:CompletedTodoTemplate BaseContext="{Binding BindingContext, Source={x:Reference TodoPage}}"/>
+                </DataTemplate>
+                <dataTemplateSelector:TodoTemplateSelector
+                    x:Key="TemplateSelector"
+                    PrimaryItemTemplate="{StaticResource CurrentTodoTemplate}"
+                    SecondaryItemTemplate="{StaticResource CompletedTodoTemplate}"/>
+            </ResourceDictionary>
+        </Grid.Resources>
+        
+        <ListView
+            ItemsSource="{Binding Todos}"
+            SelectedItem="{Binding SelectedTodo}"
+            ItemTemplate="{StaticResource TemplateSelector}"
+            CachingStrategy="RecycleElement"/>
+    </Grid>
+</ContentPage>

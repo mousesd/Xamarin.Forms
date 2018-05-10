@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace FormsApp30
+namespace FormsApp30.Views
 {
-	public partial class MainPage : ContentPage
+	public partial class MainPage : MasterDetailPage
 	{
 		public MainPage()
 		{

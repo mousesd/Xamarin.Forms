@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:FormsApp30.ViewModels"
+    xmlns:behaviors="clr-namespace:FormsApp30.Behaviors"
+    xmlns:converters="clr-namespace:FormsApp30.Converters"
+    x:Class="FormsApp30.Views.MasterPage"
+    Title="Master">
+
+    <ContentPage.BindingContext>
+        <viewModels:MasterViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <ListView x:Name="MenuItemsListView"
+            SeparatorVisibility="None"
+            HasUnevenRows="True"
+            ItemsSource="{Binding MenuItems}">
+            
+            <ListView.Resources>
+                <ResourceDictionary>
+                    <converters:ItemTappedEventArgsToMenuItem x:Key="ItemTappedEventArgsToMenuItem"/>
+                </ResourceDictionary>
+            </ListView.Resources>
+            
+            <ListView.Behaviors>
+                <behaviors:EventToCommandBehavior
+                    Command="{Binding NavigationItemSelectedCommand}"
+                    Converter="{StaticResource ItemTappedEventArgsToMenuItem}"
+                    EventName="ItemTapped"/>
+            </ListView.Behaviors>
+            <ListView.Header>
+                <Grid BackgroundColor="#03A9F4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="2" Grid.Column="1"
+                           Text="ListView Complete Demo"
+                           Style="{DynamicResource SubtitleStyle}"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5,10" HorizontalOptions="FillAndExpand">
+                            <Label VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center"
+                                Text="{Binding Title}"
+                                FontSize="24"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>
