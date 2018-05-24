@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:FormsApp31.Behaviors"
+             xmlns:converters="clr-namespace:FormsApp31.Converters"
+             x:Class="FormsApp31.MainPage"
+             Title="Todo">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Command="{Binding AddTodoItemCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android, UWP" Value="plus.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="listView" Margin="20" ItemsSource="{Binding TodoItems}">
+        <ListView.Resources>
+            <ResourceDictionary>
+                <converters:SelectedItemChangedEventArgsToTodoItem x:Key="SelectedItemChangedEventArgsToTodoItem"/>
+            </ResourceDictionary>
+        </ListView.Resources>
+        <ListView.Behaviors>
+            <behaviors:EventToCommandBehavior
+                Command="{Binding TodoItemSelectedCommand}"
+                EventName="ItemSelected"
+                Converter="{StaticResource SelectedItemChangedEventArgsToTodoItem}"/>
+        </ListView.Behaviors>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                        <Label Text="{Binding Name}" VerticalTextAlignment="Center"/>
+                        <Image Source="check.png" IsVisible="{Binding Done}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
